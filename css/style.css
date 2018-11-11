@@ -1,0 +1,359 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Bookman Old Style";
+  src: url("../fonts/BOOKOS.TTF"); }
+* {
+  margin: 0;
+  padding: 0; }
+
+p {
+  margin: 0; }
+
+a, .menu-albums {
+  font-family: "Calibri Light", serif, bold;
+  font-size: 1.4em;
+  color: white; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: #f8f8f8;
+  min-height: 100vh; }
+  body #background {
+    position: fixed;
+    background: url("../img/bg_familytree.jpg");
+    background-size: cover;
+    opacity: 0.8;
+    filter: alpha(opacity=20);
+    width: 100%;
+    height: 100%;
+    z-index: -1; }
+
+header .container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 10px; }
+  header .container #header1 #language {
+    border-radius: 15%;
+    width: 60px;
+    height: 25px;
+    font-family: "Bookman Old Style", sans-serif;
+    font-size: 14px; }
+  header .container #header1 .logo {
+    background: url("../img/logo1.png") no-repeat;
+    background-size: cover;
+    height: 100px;
+    width: 170px; }
+  header .container #header2 {
+    text-align: right;
+    width: 100%; }
+    header .container #header2 h2 {
+      font-size: 30px;
+      font-family: "Bookman Old Style", serif;
+      margin-bottom: 0; }
+    header .container #header2 h1 {
+      font-size: 41px;
+      font-family: "Bookman Old Style", serif;
+      color: #fb7268;
+      margin: 0; }
+  header .container #header3 {
+    width: 200px;
+    margin-left: 40px; }
+  header .container #portrait {
+    width: 150px;
+    background-image: url("../img/portrait_reversed.jpg");
+    height: 165px;
+    background-size: cover; }
+header #horizontal {
+  width: 800px;
+  min-width: 60%;
+  margin: auto;
+  overflow: hidden;
+  background-color: #646464;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row; }
+  header #horizontal a {
+    text-decoration: none; }
+    header #horizontal a .menu-item {
+      min-width: 110px;
+      text-align: center;
+      color: #f8f8f8; }
+    header #horizontal a:nth-child(1) div.menu-item:hover {
+      background-color: #fb7268; }
+    header #horizontal a:nth-child(2) .menu-item:hover {
+      background-color: #f7b177; }
+    header #horizontal a:nth-child(3) .menu-item:hover {
+      background-color: #f2de6b; }
+    header #horizontal a:nth-child(4) .menu-item:hover {
+      background-color: #54bd7e; }
+    header #horizontal a:nth-child(5) .menu-item:hover {
+      background-color: #6abdde; }
+    header #horizontal a:nth-child(6) .menu-item:hover {
+      background-color: #3c4e73; }
+    header #horizontal a:nth-child(7) .menu-item:hover {
+      background-color: #59486e; }
+
+main {
+  flex: 100%; }
+  main #modalWindowPicture {
+    position: fixed;
+    width: 200px;
+    height: 200px;
+    background-color: #000000;
+    text-align: center;
+    padding: 10px;
+    border: 2px solid #4e4f4d;
+    border-radius: 10px;
+    color: #4e4f4d;
+    display: none;
+    position: fixed;
+    background-color: #f8f8f8;
+    font-family: "Calibri Light", serif, bold;
+    font-size: 18px;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto; }
+  main .container {
+    background-color: white;
+    height: 100%;
+    padding: 0;
+    width: 60%;
+    min-width: 800px; }
+    main .container .carousel {
+      width: 90%;
+      margin: 10px auto; }
+    main .container #exhibitionWrapper {
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      margin: auto;
+      padding: 10px; }
+      main .container #exhibitionWrapper .exhibitionSection {
+        border-bottom: 1px black;
+        margin-top: 10px; }
+        main .container #exhibitionWrapper .exhibitionSection .exhibitionYear {
+          font-size: 1.4em;
+          color: #fb7268;
+          padding: 0 10px;
+          display: block; }
+        main .container #exhibitionWrapper .exhibitionSection .exhibitionPictures {
+          display: flex;
+          justify-content: space-around;
+          padding-top: 20px;
+          flex-wrap: wrap; }
+          main .container #exhibitionWrapper .exhibitionSection .exhibitionPictures .pictureItem {
+            margin: 20px 0;
+            cursor: pointer; }
+        main .container #exhibitionWrapper .exhibitionSection .exhibitionText {
+          text-indent: 4em; }
+    main .container #vertical {
+      float: left;
+      list-style-type: none;
+      margin: 10px 0 10px -20px;
+      padding: 0;
+      overflow: hidden;
+      width: 130px;
+      background-color: #a5a4a0;
+      text-align: center; }
+      main .container #vertical a {
+        text-decoration: none; }
+        main .container #vertical a:hover {
+          color: #f8f8f8; }
+      main .container #vertical .menu-item:hover {
+        background-color: #4e4f4d; }
+      main .container #vertical .menu-albums {
+        color: #f8f8f8;
+        background-color: #4e4f4d;
+        font-family: "Calibri Light", serif, bold;
+        font-size: 1.4em; }
+    main .container .gallery-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 0;
+      margin: 0; }
+      main .container .gallery-wrapper .album h2 {
+        margin: 10px 0 5px 0;
+        text-align: center;
+        color: #4e4f4d;
+        font-family: "Bookman Old Style", sans-serif;
+        font-size: 1.5em; }
+      main .container .gallery-wrapper .album .album-preview-pictures {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around; }
+        main .container .gallery-wrapper .album .album-preview-pictures .album-preview-picture {
+          margin: 10px;
+          height: 220px;
+          width: 220px;
+          background-image: url("../img/kazan_street.jpg");
+          background-size: cover; }
+      main .container .gallery-wrapper .main-picture-item {
+        margin-top: 10px;
+        height: 390px;
+        width: 390px;
+        background-image: url("../img/kazan_street.jpg");
+        background-size: cover; }
+    main .container .order-wrapper {
+      display: flex;
+      flex-direction: column;
+      margin: 0px 50px 0px 100px; }
+      main .container .order-wrapper .order-text {
+        margin: 15px 0; }
+    main .container .order-filter {
+      display: flex;
+      justify-content: space-around; }
+      main .container .order-filter .buyButton {
+        width: 200px;
+        height: 50px;
+        border: solid #4e4f4d 2px;
+        background-color: transparent;
+        font-family: "Calibri Light", serif, bold;
+        font-size: 1.2em;
+        color: #4e4f4d;
+        text-decoration: none;
+        text-align: center;
+        padding-top: 7px; }
+        main .container .order-filter .buyButton:hover {
+          background-color: #4e4f4d;
+          color: #f7f7f7; }
+      main .container .order-filter .order-filter-preview {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100px;
+        height: 100px; }
+        main .container .order-filter .order-filter-preview .preview-item {
+          width: 33px;
+          height: 33px;
+          background-size: cover; }
+    main .container .contacts-wrapper {
+      margin: 0 40px; }
+    main .container .about_wrapper {
+      width: 90%;
+      margin: auto;
+      padding: 10px;
+      display: flex; }
+      main .container .about_wrapper .about_main_flex {
+        min-width: 60%; }
+      main .container .about_wrapper .about_side {
+        margin: 0 10px 0 15px; }
+        main .container .about_wrapper .about_side .about_side_picture {
+          background-image: url("../img/lialia_about.jpg");
+          width: 282px;
+          height: 413px;
+          margin: auto; }
+        main .container .about_wrapper .about_side .about_biography {
+          margin: 20px;
+          color: #4e4f4d; }
+    main .container .articles_wrapper .main_text {
+      width: 90%;
+      margin: auto;
+      padding: 10px; }
+      main .container .articles_wrapper .main_text .articles_picture {
+        float: right;
+        margin: 0 0 10px 10px;
+        width: 360px; }
+    main .container .poems_wrapper {
+      display: flex;
+      justify-content: space-around;
+      padding: 10px 20px; }
+      main .container .poems_wrapper .poems_col1 {
+        width: 48%; }
+
+footer .container {
+  border-top: solid #7e7e7e thin;
+  min-height: 60px;
+  text-align: right; }
+
+.container {
+  width: 60%;
+  min-width: 800px;
+  margin: auto;
+  background: white; }
+
+.button_lang {
+  background: #646464;
+  padding: 5px 10px;
+  color: #f8f8f8;
+  border-radius: 20%;
+  height: 30px;
+  align-self: center;
+  margin-bottom: 15px;
+  line-height: 18px; }
+
+#main_link {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%; }
+
+.modal_window {
+  text-align: center;
+  padding: 10px;
+  border: 2px solid #4e4f4d;
+  border-radius: 10px;
+  color: #4e4f4d;
+  display: none;
+  position: fixed;
+  background-color: #f8f8f8;
+  font-family: "Calibri Light", serif, bold;
+  font-size: 18px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto; }
+  .modal_window .modal_picture {
+    width: 100%;
+    height: 95%; }
+  .modal_window .modal_caption {
+    padding-top: 5px;
+    height: 40px;
+    width: 100%; }
+  .modal_window .modal_close {
+    color: #4e4f4d;
+    font: 14px "Calibri Light", serif, bold;
+    position: absolute;
+    text-decoration: none;
+    right: 5px;
+    padding: 0 6px;
+    margin-top: -20px;
+    margin-right: -20px;
+    background: #f8f8f8;
+    border-radius: 50%;
+    font-size: 18pt; }
+    .modal_window .modal_close:after {
+      content: "✖"; }
+
+[id*='modal_']:target {
+  display: block;
+  /* Стили для всплывающей картинки  *. */ }
+
+.popup {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  text-align: center; }
+
+.popup_bg {
+  background: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%; }
+
+.popupImage {
+  position: relative;
+  z-index: 2;
+  max-height: 90%;
+  max-width: 90%; }
+
+/*# sourceMappingURL=style.css.map */
